@@ -18,9 +18,25 @@ namespace csWebAppMVC.Controllers
             return View();
         }
 
+        //[HttpPost]
         public IActionResult Privacy()
         {
             return View();
+        }
+
+        public IActionResult Forms()
+        {
+            return View();
+        }
+
+        public IActionResult SumitInfo(Employee param)
+        {  
+            List<Employee> list = new List<Employee>();
+            for(int i = 0; i < 10; i++)
+            {
+                list.Add(new Employee { fname = (param.fname + i.ToString() ), id = param.id + i });
+            }
+            return View("Table", list);
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

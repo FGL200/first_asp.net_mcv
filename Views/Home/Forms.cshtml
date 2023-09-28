@@ -1,0 +1,15 @@
+﻿
+@{
+    ViewData["Title"] = "forms";
+}
+
+<h1>Form</h1>
+
+<main class="d-flex align-items-center justify-content-center">
+    <form action="@Url.Action("SumitInfo", "Home")" method="post" class="p-5 card gap-2">
+        <input name="param.fname" class="form-control" type="text" placeholder="Full Name">
+        <input name="param.id" class="form-control" type="number" placeholder="Age" min="0">
+        <button type="submit" class="btn btn-outline-primary">Submit</button>
+    </form>
+</main>
+
